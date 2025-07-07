@@ -12,7 +12,7 @@ import SwiftData
 struct AudioTranscriptorApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            RecordingEntry.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -27,8 +27,9 @@ struct AudioTranscriptorApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                AudioRecorderView()
+                AudioRecorderView(context: sharedModelContainer.mainContext)
             }
+            .modelContainer(sharedModelContainer)
         }
     }
 }

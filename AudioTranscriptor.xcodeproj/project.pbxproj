@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		0202EEDB2E15891100BBD57F /* RecordingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0202EED72E15891100BBD57F /* RecordingViewModel.swift */; };
 		0202EEDC2E15891100BBD57F /* AudioRecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0202EED52E15891100BBD57F /* AudioRecorderView.swift */; };
-		0202EEDD2E15891100BBD57F /* AudioRecorderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0202EED32E15891100BBD57F /* AudioRecorderService.swift */; };
+		027C6BDC2E198BF40025732F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C6BDB2E198BEC0025732F /* SettingsView.swift */; };
+		027C6BE02E198C390025732F /* RecordingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C6BDF2E198C380025732F /* RecordingsListView.swift */; };
+		027C6BE22E198C530025732F /* RecordingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C6BE12E198C530025732F /* RecordingDetailView.swift */; };
+		027C6BE42E198C680025732F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C6BE32E198C650025732F /* Utils.swift */; };
+		028810972E1B42A20080FAFA /* RecordingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028810962E1B429A0080FAFA /* RecordingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +37,13 @@
 		0202EE992E1588AE00BBD57F /* AudioTranscriptor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioTranscriptor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0202EEA82E1588B200BBD57F /* AudioTranscriptorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioTranscriptorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0202EEB22E1588B200BBD57F /* AudioTranscriptorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioTranscriptorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0202EED32E15891100BBD57F /* AudioRecorderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderService.swift; sourceTree = "<group>"; };
 		0202EED52E15891100BBD57F /* AudioRecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderView.swift; sourceTree = "<group>"; };
 		0202EED72E15891100BBD57F /* RecordingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewModel.swift; sourceTree = "<group>"; };
+		027C6BDB2E198BEC0025732F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		027C6BDF2E198C380025732F /* RecordingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsListView.swift; sourceTree = "<group>"; };
+		027C6BE12E198C530025732F /* RecordingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingDetailView.swift; sourceTree = "<group>"; };
+		027C6BE32E198C650025732F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		028810962E1B429A0080FAFA /* RecordingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -65,6 +73,11 @@
 		0202EEB52E1588B200BBD57F /* AudioTranscriptorUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = AudioTranscriptorUITests;
+			sourceTree = "<group>";
+		};
+		028810982E1B45680080FAFA /* APIRequest */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = APIRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -118,7 +131,7 @@
 		0202EED42E15891100BBD57F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0202EED32E15891100BBD57F /* AudioRecorderService.swift */,
+				028810962E1B429A0080FAFA /* RecordingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,6 +139,10 @@
 		0202EED62E15891100BBD57F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				027C6BE32E198C650025732F /* Utils.swift */,
+				027C6BE12E198C530025732F /* RecordingDetailView.swift */,
+				027C6BDF2E198C380025732F /* RecordingsListView.swift */,
+				027C6BDB2E198BEC0025732F /* SettingsView.swift */,
 				0202EED52E15891100BBD57F /* AudioRecorderView.swift */,
 			);
 			path = View;
@@ -142,6 +159,7 @@
 		0202EED92E15891100BBD57F /* AudioRecorder */ = {
 			isa = PBXGroup;
 			children = (
+				028810982E1B45680080FAFA /* APIRequest */,
 				0202EED42E15891100BBD57F /* Model */,
 				0202EED62E15891100BBD57F /* View */,
 				0202EED82E15891100BBD57F /* ViewModel */,
@@ -166,6 +184,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				0202EE9B2E1588AE00BBD57F /* AudioTranscriptor */,
+				028810982E1B45680080FAFA /* APIRequest */,
 			);
 			name = AudioTranscriptor;
 			packageProductDependencies = (
@@ -293,9 +312,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				027C6BDC2E198BF40025732F /* SettingsView.swift in Sources */,
+				028810972E1B42A20080FAFA /* RecordingModel.swift in Sources */,
 				0202EEDB2E15891100BBD57F /* RecordingViewModel.swift in Sources */,
+				027C6BE02E198C390025732F /* RecordingsListView.swift in Sources */,
+				027C6BE42E198C680025732F /* Utils.swift in Sources */,
 				0202EEDC2E15891100BBD57F /* AudioRecorderView.swift in Sources */,
-				0202EEDD2E15891100BBD57F /* AudioRecorderService.swift in Sources */,
+				027C6BE22E198C530025732F /* RecordingDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
